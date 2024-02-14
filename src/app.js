@@ -45,7 +45,7 @@ app.get('/product', (req, res) => {
   // Implement JWT token verification logic here
   jwt.verify(token,secretKey,(err,decode)=>{
     if(err){
-      res.status(401).json({message:"Invalid token.",error:err.message})
+      res.status(401).json({message:"Invalid token",error:err.message})
     }
   })
   // If the token is valid, students can access product data and send it in the response
